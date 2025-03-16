@@ -39,6 +39,7 @@ const Create = () => {
       .post("http://localhost:8080/jobPost",form)
       .then((resp) => {
         console.log(resp.data);
+        navigate("/")
       })
       .catch((error) => {
         console.log(error);
@@ -134,7 +135,7 @@ const Create = () => {
             sx={{ width: "50%", margin: "2% auto" }}
             variant="contained"
             type="submit"
-            onClick={()=>navigate("/")}
+            //onClick={()=>navigate("/")}
           >
             Submit
           </Button>
